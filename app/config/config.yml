@@ -70,3 +70,14 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
+
+fos_oauth_server:
+    db_driver: orm
+    client_class:        Acme\DemoBundle\Entity\Client
+    access_token_class:  Acme\DemoBundle\Entity\AccessToken
+    refresh_token_class: Acme\DemoBundle\Entity\RefreshToken
+    auth_code_class:     Acme\DemoBundle\Entity\AuthCode
+    service:
+        user_provider: platform.user.provider
+        options:
+            supported_scopes: user
