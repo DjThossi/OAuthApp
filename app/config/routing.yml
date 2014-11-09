@@ -11,4 +11,11 @@ acme_oauth_server_auth_login:
 
 acme_oauth_server_auth_login_check:
     pattern:  /oauth/v2/auth_login_check
-    defaults: { _controller: AcmeDemoBundle:Security:loginCheck }
+
+api_articles:
+    pattern:  /api/articles
+    defaults: { _controller: AcmeDemoBundle:Api:articles }
+
+api_user:
+    pattern:  /api/user
+    defaults: { _controller: AcmeDemoBundle:Api:user }

@@ -29,7 +29,7 @@ security:
             pattern:    ^/demo/secured/
             form_login:
                 provider: user_provider
-                check_path: _security_check
+                check_path: _demo_security_check
                 login_path: _demo_login
             logout:
                 path:   _demo_logout
@@ -42,8 +42,8 @@ security:
             pattern:    ^/oauth/v2/auth
             form_login:
                 provider: user_provider
-                check_path: _security_check
-                login_path: _demo_login
+                check_path: acme_oauth_server_auth_login_check
+                login_path: acme_oauth_server_auth_login
             anonymous: true
 
         api:
